@@ -220,6 +220,9 @@ services:
     - ${CHAINCODE_HOME:-./chaincode}:/opt/chaincode
     - ${CHAINCODE_HOME:-./chaincode}/go:/opt/gopath/src
     - ./crypto-config:/etc/hyperledger/crypto-config
+    - ./packages/core/chaincode/shim/ext/cid:/opt/go/src/github.com/hyperledger/fabric/core/chaincode/shim/ext/cid
+    - ./packages/core/chaincode/lib/cid:/opt/go/src/github.com/hyperledger/fabric/core/chaincode/lib/cid
+    - ./packages/google/uuid:/opt/gopath/src/github.com/google/uuid
 #    - ${FABRIC_STARTER_HOME:-.}/templates:/etc/hyperledger/templates # for local debug
 #    - ${FABRIC_STARTER_HOME:-.}/container-scripts:/etc/hyperledger/container-scripts # for local debug
 
